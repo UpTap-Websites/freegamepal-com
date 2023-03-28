@@ -11,7 +11,7 @@ export default function Privacy(params) {
       </Head>
       <div className={`game-box`}>
         <section>
-          <div className="section-title">
+          <div className="page-title">
             <h1>Privacy Policy</h1>
           </div>
           <div className="page-content">

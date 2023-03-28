@@ -7,61 +7,61 @@ body {
   @apply bg-slate-900;
 }
 .wrapper {
-  @apply flex flex-col min-h-screen font-['Nunito'] xl:flex-row;
+  @apply flex min-h-screen flex-col font-['Nunito'] xl:flex-row;
 }
 
 .site-nav {
-  @apply xl:fixed xl:left-0 xl:h-screen flex text-sm bg-blue-500 xl:bg-slate-800 text-white xl:w-60 flex-col;
+  @apply flex flex-col bg-blue-500 text-sm text-white xl:fixed xl:left-0 xl:h-screen xl:w-60 xl:bg-slate-800;
 }
 
 .site-branding {
-  @apply inline-flex xl:flex p-3 xl:bg-gradient-to-br xl:from-blue-500 xl:to-blue-700 items-center xl:justify-center text-lg gap-2 font-black xl:flex-col;
+  @apply inline-flex items-center gap-2 p-3 text-lg font-black xl:flex xl:flex-col xl:justify-center xl:bg-gradient-to-br xl:from-blue-500 xl:to-blue-700;
 }
 
 .site-branding .logo {
-  @apply w-12 h-12 xl:w-20 xl:h-20 rounded-xl bg-gradient-to-t from-orange-400 to-yellow-300 border-2 xl:border-4 border-white shadow-lg;
+  @apply h-12 w-12 rounded-xl border-2 border-white bg-gradient-to-t from-orange-400 to-yellow-300 shadow-lg xl:h-20 xl:w-20 xl:border-4;
 }
 
 .menu-btn {
-  @apply absolute grid justify-center items-center top-4 right-4 w-10 h-10  xl:hidden;
+  @apply absolute top-4 right-4 grid h-10 w-10 items-center justify-center  xl:hidden;
 }
 
 .menu-content {
-  @apply grow absolute inset-x-0 z-10 bg-slate-800 shadow-lg xl:shadow-none xl:static;
+  @apply absolute inset-x-0 z-10 grow bg-slate-800 shadow-lg xl:static xl:shadow-none;
 }
 
 .menu-list {
-  @apply grid grid-cols-2 p-4 xl:static xl:flex xl:flex-col gap-4 xl:m-4 xl:bg-transparent xl:shadow-none xl:overflow-y-auto xl:pb-32;
+  @apply grid grid-cols-2 gap-4 p-4 xl:static xl:m-4 xl:flex xl:flex-col xl:overflow-y-auto xl:bg-transparent xl:pb-32 xl:shadow-none;
 }
 
 .menu-list li {
-  @apply border-l-4 border-l-blue-800 xl:hover:border-l-blue-400 xl:hover:pl-4 xl:transform xl:duration-300;
+  @apply border-l-4 border-l-blue-800 xl:transform xl:duration-300 xl:hover:border-l-blue-400 xl:hover:pl-4;
 }
 
 .menu-list li a {
-  @apply flex gap-2 items-center pl-2 py-2;
+  @apply flex items-center gap-2 py-2 pl-2;
 }
 
 .menu-list .current {
-  @apply font-bold xl:text-lg border-l-yellow-400 xl:pl-4 xl:hover:border-l-yellow-400;
+  @apply border-l-yellow-400 font-bold xl:pl-4 xl:hover:border-l-yellow-400;
 }
 
 .nav-footer {
-  @apply m-4 text-xs rounded-b-3xl xl:block whitespace-nowrap xl:absolute xl:left-0 xl:bottom-0;
+  @apply m-4 whitespace-nowrap rounded-b-3xl text-xs xl:absolute xl:left-0 xl:bottom-0 xl:block;
 }
 
 .nav-footer ul {
-  @apply grid grid-cols-2 gap-2 mb-3 border-y py-4  border-y-white/20;
+  @apply mb-3 grid grid-cols-2 gap-2 border-y border-y-white/20  py-4;
 }
 
 .nav-footer p {
   @apply opacity-70;
 }
 .main-content {
-  @apply grow flex flex-col xl:pl-60 xl:overflow-y-scroll;
+  @apply flex grow flex-col xl:overflow-y-scroll xl:pl-60;
 }
 .site-main {
-  @apply grow grid gap-4 bg-blue-900 text-blue-900 xl:grid-cols-3 xl:p-8;
+  @apply grid grow gap-4 bg-blue-900 text-blue-900 xl:grid-cols-3 xl:p-8;
 }
 
 .list .site-main,
@@ -73,19 +73,19 @@ body {
 }
 
 .game-box {
-  @apply bg-white border-blue-100 border-4 shadow-lg shadow-blue-500/10 xl:rounded-xl;
+  @apply border-4 border-blue-100 bg-white shadow-lg shadow-blue-500/10 xl:rounded-xl;
 }
 
 .section-title {
-  @apply flex justify-between items-center mx-4 mt-4;
+  @apply mx-4 mt-4 flex items-center justify-between;
 }
 
 .section-title h2 {
-  @apply text-blue-800 relative z-0 text-xl font-bold;
+  @apply relative z-0 text-xl font-bold text-blue-800;
 }
 
 .section-title h2 {
-  @apply after:absolute after:w-8 after:h-2 after:bg-gradient-to-r after:from-yellow-400 after:to-orange-400 after:left-0 after:bottom-1 after:-z-10;
+  @apply after:absolute after:left-0 after:bottom-1 after:-z-10 after:h-2 after:w-8 after:bg-gradient-to-r after:from-yellow-400 after:to-orange-400;
 }
 
 .more-link {
@@ -93,27 +93,27 @@ body {
 }
 
 .page-title {
-  @apply flex justify-center items-center mx-4 mt-4;
+  @apply mx-4 mt-4 flex items-center justify-center;
 }
 
 .page-title h1 {
-  @apply my-3 text-blue-800 relative z-0 text-2xl xl:text-4xl font-bold;
+  @apply relative z-0 my-3 text-2xl font-bold text-blue-800 xl:text-4xl;
 }
 
 .page-title h1 {
-  @apply after:absolute after:w-14 after:h-3 after:bg-gradient-to-r after:from-yellow-400 after:to-orange-400 after:left-1/2 after:-translate-x-1/2 after:bottom-1 after:-z-10;
+  @apply after:absolute after:left-1/2 after:bottom-1 after:-z-10 after:h-3 after:w-14 after:-translate-x-1/2 after:bg-gradient-to-r after:from-yellow-400 after:to-orange-400;
 }
 
 .page-content {
   overflow-wrap: anywhere;
-  @apply m-4 xl:my-8 xl:max-w-3xl xl:mx-auto;
+  @apply m-4 xl:my-8 xl:mx-auto xl:max-w-3xl;
 }
 
 .page-content h2 {
-  @apply text-lg font-bold my-3;
+  @apply my-3 text-lg font-bold;
 }
 .page-content ul {
-  @apply list-disc list-outside ml-4 my-2;
+  @apply my-2 ml-4 list-outside list-disc;
 }
 .page-content p {
   @apply mb-4;
@@ -125,11 +125,11 @@ body {
 }
 
 .game-list img {
-  @apply rounded-2xl w-48;
+  @apply w-48 rounded-2xl;
 }
 
 .game-list {
-  @apply grid gap-4 grid-cols-2 m-4 xl:grid-cols-2;
+  @apply m-4 grid grid-cols-2 gap-4 xl:grid-cols-2;
 }
 
 .game-list li {
@@ -141,15 +141,15 @@ body {
 }
 
 .game-list a {
-  @apply overflow-hidden xl:relative xl:hover:scale-110 xl:transform xl:duration-300 xl:hover:rounded-3xl font-bold;
+  @apply overflow-hidden font-bold xl:relative xl:transform xl:duration-300 xl:hover:scale-110 xl:hover:rounded-3xl;
 }
 
 .game-list a span {
-  @apply xl:text-white xl:text-center xl:w-full xl:-bottom-full xl:absolute xl:inline-block mx-2 pb-2 pt-5 text-sm;
+  @apply mx-2 pb-2 pt-5 text-sm xl:absolute xl:-bottom-full xl:inline-block xl:w-full xl:text-center xl:text-white;
 }
 
 .game-list a:hover span {
-  @apply xl:bottom-0 xl:transform xl:duration-300 xl:bg-gradient-to-t xl:from-black/80;
+  @apply xl:bottom-0 xl:transform xl:bg-gradient-to-t xl:from-black/80 xl:duration-300;
 }
 
 .breadcrumb a {
@@ -157,9 +157,13 @@ body {
 }
 
 .site-footer {
-  @apply flex justify-center text-center p-4 bg-slate-900 text-xs whitespace-nowrap;
+  @apply flex justify-center whitespace-nowrap bg-slate-900 p-4 text-center text-xs;
 }
 
 .game-detail {
   @apply m-4 flex flex-col xl:flex-row xl:gap-6;
+}
+
+.play-btn {
+  @apply flex w-full justify-center rounded-lg bg-orange-400 py-3 text-2xl font-bold text-white shadow;
 }

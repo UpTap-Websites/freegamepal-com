@@ -59,7 +59,7 @@ export default function Navbar({ navItems }) {
         </button>
         <div className={`menu-content xl:block ${isOpen ? "" : "hidden"}`}>
           <ul className="menu-list">
-            <li className="current">
+            <li>
               <Link href="/">
                 <Image src={iconHome} width={20} height={20} alt="home" />
                 <span>Home</span>

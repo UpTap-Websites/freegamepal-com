@@ -11,7 +11,7 @@ export default function Terms(params) {
       </Head>
       <div className={`game-box`}>
         <section>
-          <div className="section-title">
+          <div className="page-title">
             <h1>Terms of Use</h1>
           </div>
           <div className="page-content">

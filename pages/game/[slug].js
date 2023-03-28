@@ -76,7 +76,7 @@ export default function Game({ game, relatedGames }) {
             <div class="xl:hidden my-3">
               <Link
                 href={getGameUrl(game.slug)}
-                className="play-btn rounded-lg text-2xl font-bold w-full py-3 bg-orange-400 text-white"
+                className="play-btn"
                 title={`Play ` + game.title + ` Now`}
               >
                 <span>Play Now</span>

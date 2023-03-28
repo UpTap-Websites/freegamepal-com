@@ -3,8 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.playgamesfree.xyz
+Host: https://www.freegamepal.com
 
 # Sitemaps
-Sitemap: https://www.playgamesfree.xyz/sitemap.xml
-Sitemap: https://www.playgamesfree.xyz/sitemap-0.xml
+Sitemap: https://www.freegamepal.com/sitemap.xml

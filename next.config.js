@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [`games.assets.gamepix.com`],
-    formats: [`image/avif`, `image/webp`],
+    // domains: [`games.assets.gamepix.com`],
+    // formats: [`image/avif`, `image/webp`],
     unoptimized: true,
   },
   compiler: {

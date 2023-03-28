@@ -7,6 +7,7 @@ import { SITE_META } from "@/lib/constants";
 
 import { getCategories, getGamesByCategorySlug } from "@/lib/api";
 import getGameIcon from "@/utils/getGameIcon";
+import getGameBanner from "@/utils/getGameBanner";
 import AdScript from "@/components/AdScript";
 
 export default function Category({ games, category, total }) {
@@ -16,36 +17,35 @@ export default function Category({ games, category, total }) {
       <Head>
         <title>{category.name + ` Games | ` + SITE_META.NAME}</title>
         <meta name="description" content={`Play ${category.name} games on ${SITE_META.NAME}`} />
-        <link rel="canonical" href={`https://www.playgamesfree.xyz/category/${category.slug}`} />
+        <link rel="canonical" href={`${SITE_META.URL}/category/${category.slug}`} />
       </Head>
       <AdScript />
-      <div className={`category`}>
-        <section>
-          <div className={`section-head`}>
-            <h2 className={`h2`}>{category.name + ` Games`}</h2>
-            {/* <span className="total">{total}</span> */}
-          </div>
-          <ul className={`section-body`}>
-            {games.map((i, index) => (
-              <li key={i.slug} className="list-item">
-                <Link href={`/game/` + i.slug}>
-                  <Image
-                    className="image"
-                    src={getGameIcon(i.gid)}
-                    alt={i.title}
-                    width={100}
-                    height={100}
-                    loading={index <= 9 ? `eager` : `lazy`}
-                  />
-                  <div className="title">{i.title}</div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          {/* <Link href={`/category`} className="link-more">
+
+      <div className={`game-box category`}>
+        <div className={`page-title`}>
+          <h1>{category.name + ` Games`}</h1>
+          {/* <span className="total">{total}</span> */}
+        </div>
+        <ul className={`game-list`}>
+          {games.map((i, index) => (
+            <li key={i.slug}>
+              <Link href={`/game/` + i.slug}>
+                <Image
+                  className="image"
+                  src={getGameBanner(i.gid)}
+                  alt={i.title}
+                  width={132}
+                  height={81}
+                  loading={index <= 9 ? `eager` : `lazy`}
+                />
+                <span className="title">{i.title}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        {/* <Link href={`/category`} className="link-more">
             More
           </Link> */}
-        </section>
       </div>
     </Layout>
   );

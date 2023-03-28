@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SITE_META } from "../lib/constants";
-import Logo from "../public/brand/playgamesfree-logo.png";
+import { SITE_META } from "@/lib/constants";
+import Logo from "@/public/brand/logo.png";
 // import { useRouter } from "next/router";
 export default function Footer(params) {
   return (
     <footer className="site-footer">
-      <nav className="footer-nav">
+      {/* <nav className="footer-nav">
         <ul>
           <li>
             <Link href={`/about`}>About</Link>
@@ -18,17 +18,17 @@ export default function Footer(params) {
             <Link href={`/terms`}>Terms of Use</Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
       {/* <Image className="footer-logo" src={Logo} alt={SITE_META.NAME} /> */}
       <Image
-        className="footer-logo w-auto"
+        className="w-8 h-8"
         src={Logo}
-        width={64}
-        height={64}
+        width={14}
+        height={14}
         // src={useRouter().basePath + `/brand/uptapgame-logo.svg`}
         alt={SITE_META.NAME}
       />
-      <p>{`© ${new Date().getFullYear()} ${SITE_META.NAME}`}</p>
+      {/* <p>{`© ${new Date().getFullYear()} ${SITE_META.NAME}`}</p> */}
     </footer>
   );
 }

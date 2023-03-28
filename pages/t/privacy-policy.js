@@ -1,20 +1,20 @@
 import Head from "next/head";
-import Layout from "../components/Layout";
-import { SITE_META } from "../lib/constants";
+import Layout from "../../components/Layout";
+import { SITE_META } from "../../lib/constants";
 
 export default function Privacy(params) {
   return (
     <Layout>
       <Head>
         <title>{`Privacy Policy` + ` | ` + SITE_META.NAME}</title>
-        <link rel="canonical" href="https://www.playgamesfree.xyz/privacy" />
+        <link rel="canonical" href={`${SITE_META.URL}/t/privcay-policy`} />
       </Head>
-      <div className={`page xl:mx-auto`}>
+      <div className={`game-box`}>
         <section>
-          <div className="section-head">
-            <h2 className="h2">Privacy Policy</h2>
+          <div className="section-title">
+            <h1>Privacy Policy</h1>
           </div>
-          <div className="mx-8 p-4 rounded-md text-yellow-900 mb-4 bg-amber-200">
+          <div className="page-content">
             <p>
               At {SITE_META.NAME}, accessible from {SITE_META.URL}, one of our main priorities is
               the privacy of our visitors. This Privacy Policy document contains types of

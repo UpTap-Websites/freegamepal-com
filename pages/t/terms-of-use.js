@@ -1,20 +1,20 @@
 import Head from "next/head";
-import Layout from "../components/Layout";
-import { SITE_META } from "../lib/constants";
+import Layout from "@/components/Layout";
+import { SITE_META } from "@/lib/constants";
 
 export default function Terms(params) {
   return (
     <Layout>
       <Head>
         <title>{`Terms of Use` + ` | ` + SITE_META.NAME}</title>
-        <link rel="canonical" href="https://www.playgamesfree.xyz/terms" />
+        <link rel="canonical" href={`${SITE_META.URL}/t/terms-of-use`} />
       </Head>
-      <div className={`page xl:mx-auto`}>
+      <div className={`game-box`}>
         <section>
-          <div className="section-head">
-            <h2 className="h2">Terms of Use</h2>
+          <div className="section-title">
+            <h1>Terms of Use</h1>
           </div>
-          <div className="mx-8 p-4 rounded-md text-yellow-900 mb-4 bg-amber-200">
+          <div className="page-content">
             <p>
               The {SITE_META.NAME} website located at {SITE_META.URL} is a copyrighted work
               belonging to {SITE_META.NAME}. Certain features of the Site may be subject to

@@ -16,42 +16,40 @@ export default function Home({ data }) {
       <Head>
         <title>{SITE_META.NAME + ` | ` + SITE_META.TAGLINE}</title>
         <meta name="description" content="Play online games for free!" />
-        <link rel="canonical" href="https://www.playgamesfree.xyz" />
+        <link rel="canonical" href={SITE_META.DOMAIN} />
       </Head>
       <AdScript />
-      <div className={`home`}>
-        {data.map((i, index) => (
-          <section key={i.category.slug}>
-            <div className={`section-head`}>
-              <h2 className={`h2`}>{i.category.name + ` Games`}</h2>
-              {/* <span className="total">{i.data.total}</span> */}
-            </div>
-            <ul className={`section-body`}>
-              {i.data.games.map((i) => (
-                <ListItem item={i} type={`banner`} key={i.slug} />
-                // <li className="list-item" key={i.slug}>
-                //   <Link href={`/game/` + i.slug}>
-                //     <Image
-                //       className="image"
-                //       src={getGameBanner(i.gid)}
-                //       alt={i.title}
-                //       width={100}
-                //       height={100}
-                //       loading={index <= 1 ? `eager` : `lazy`}
-                //     />
-                //     <div className="title">{i.title}</div>
-                //   </Link>
-                // </li>
-              ))}
-            </ul>
+
+      {data.map((i, index) => (
+        <section className="game-box" key={i.category.slug}>
+          <div className={`section-title`}>
+            <h2 className={`h2`}>{i.category.name}</h2>
             {i.data.total > 6 ? (
-              <Link href={`/category/` + i.category.slug} className="link-more" title="More">
+              <Link href={`/category/` + i.category.slug} className="more-link" title="More">
                 More
               </Link>
             ) : null}
-          </section>
-        ))}
-      </div>
+          </div>
+          <ul className={`game-list`}>
+            {i.data.games.map((i) => (
+              <ListItem item={i} type={`banner`} key={i.slug} />
+              // <li className="list-item" key={i.slug}>
+              //   <Link href={`/game/` + i.slug}>
+              //     <Image
+              //       className="image"
+              //       src={getGameBanner(i.gid)}
+              //       alt={i.title}
+              //       width={100}
+              //       height={100}
+              //       loading={index <= 1 ? `eager` : `lazy`}
+              //     />
+              //     <div className="title">{i.title}</div>
+              //   </Link>
+              // </li>
+            ))}
+          </ul>
+        </section>
+      ))}
     </Layout>
   );
 }

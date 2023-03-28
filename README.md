@@ -1,4 +1,4 @@
-# PlayGamesFree.xyz
+# FreeGamePal
 
 重构版
 

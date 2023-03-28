@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ListItem({ item, type }) {
   return (
-    <li className="list-item">
+    <li>
       <Link href={`/game/${item.slug}`} title={item.title}>
         <Image
           className="image"
@@ -14,7 +14,7 @@ export default function ListItem({ item, type }) {
           width={type !== `banner` ? 100 : 132}
           height={type !== `banner` ? 100 : 81}
         />
-        <div className="title">{item.title}</div>
+        <span className="title">{item.title}</span>
         {/* <div className="category">{item.category.name}</div> */}
         {/* <div className="rating">{item.rating}</div> */}
       </Link>

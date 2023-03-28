@@ -2,6 +2,19 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { SITE_META } from "../lib/constants";
+import Image from "next/image";
+import Logo from "@/public/brand/logo.png";
+import iconHome from "@/public/assets/icon/home.svg";
+import iconMenu from "@/public/assets/icon/menu.svg";
+import iconClose from "@/public/assets/icon/close.svg";
+import iconPuzzle from "@/public/assets/icon/puzzle.svg";
+import iconStrategy from "@/public/assets/icon/strategy.svg";
+import iconSports from "@/public/assets/icon/sports.svg";
+import iconBoard from "@/public/assets/icon/board.svg";
+import iconClassics from "@/public/assets/icon/classics.svg";
+import iconArcade from "@/public/assets/icon/arcade.svg";
+import iconJunior from "@/public/assets/icon/junior.svg";
+import iconAdventure from "@/public/assets/icon/adventure.svg";
 
 export default function Navbar({ navItems }) {
   const [isOpen, setIsOpen] = useState(false); // 默认不展开导航菜单
@@ -20,7 +33,7 @@ export default function Navbar({ navItems }) {
   }
 
   useEffect(() => {
-    let menuItems = document.querySelectorAll(".menu-item a"); // 导航链接集合
+    let menuItems = document.querySelectorAll(".menu-list a"); // 导航链接集合
     let currentItem = document.querySelector(".current"); // 选取.current
     currentItem && currentItem.classList.remove("current"); // 如果存在.current则先移除
 
@@ -29,105 +42,96 @@ export default function Navbar({ navItems }) {
       // console.log(`parent Ele: `, i.parentElement);
       // console.log(`parent Node: `, i.parentNode);
       // console.log(`a href: `, i.getAttribute("href"));
-      // console.log(`b: `, i.parentNode.classList);
+      // console.log(`b: `, i.parentNode.classNameList);
       // console.log(`currentQuery: `, currentQuery.slug);
     }
   }, [currentPath]);
   return (
-    <header>
-      <nav className="site-nav">
-        <Link href={`/`} title={SITE_META.NAME} className="home-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-          </svg>
-          <span className="sr-only">{SITE_META.NAME}</span>
+    <nav className="site-nav">
+      <div className="grow relative">
+        <Link href="/" className="site-branding">
+          <Image className="logo" width={20} height={20} src={Logo} alt="Logo" />
+
+          <span>FreeGamePal</span>
         </Link>
-        <button className="menu-button" onClick={handleClick} arial-label="menu">
-          {isOpen ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                fillRule="evenodd"
-                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
-                clipRule="evenodd"
-              />
-            </svg>
-          )}
+        <button className="menu-btn" onClick={handleClick}>
+          <Image src={isOpen ? iconClose : iconMenu} width={20} height={20} alt="menu" />
         </button>
-        <div className={(isOpen ? "" : "hidden ") + "menu-panel"}>
+        <div className={`menu-content xl:block ${isOpen ? "" : "hidden"}`}>
           <ul className="menu-list">
-            <li className="menu-item">
-              <Link href={`/all`} title={`All`}>
-                All
+            <li className="current">
+              <Link href="/">
+                <Image src={iconHome} width={20} height={20} alt="home" />
+                <span>Home</span>
               </Link>
             </li>
-            <li className="menu-item">
-              <Link href={`/category/adventure`} title={`Adventure`}>
-                Adventure
+            <li>
+              <Link href="/category/puzzles">
+                <Image src={iconPuzzle} width={20} height={20} alt="puzzle" />
+                <span>Puzzles</span>
               </Link>
             </li>
-            <li className="menu-item">
-              <Link href={`/category/` + `arcade`} title={`Arcade`}>
-                Arcade
+            <li>
+              <Link href="/category/adventure">
+                <Image src={iconAdventure} width={20} height={20} alt="adventure" />
+                <span>Adventure</span>
               </Link>
             </li>
-            <li className="menu-item">
-              <Link href={`/category/board`} title={`Board`}>
-                Board
+            <li>
+              <Link href="/category/classics">
+                <Image src={iconClassics} width={20} height={20} alt="classics" />
+                <span>Classics</span>
               </Link>
             </li>
-            <li className="menu-item">
-              <Link href={`/category/junior`} title={`Junior`}>
-                Junior
+            <li>
+              <Link href="/category/arcade">
+                <Image src={iconArcade} width={20} height={20} alt="arcade" />
+                <span>Arcade</span>
               </Link>
             </li>
-            <li className="menu-item">
-              <Link href={`/category/puzzles`} title={`Puzzles`}>
-                Puzzles
+            <li>
+              <Link href="/category/junior">
+                <Image src={iconJunior} width={20} height={20} alt="junior" />
+                <span>Junior</span>
               </Link>
             </li>
-            <li className="menu-item">
-              <Link href={`/category/classics`} title={`Classics`}>
-                Classics
+            <li>
+              <Link href="/category/board">
+                <Image src={iconBoard} width={20} height={20} alt="board" />
+                <span>Board</span>
               </Link>
             </li>
-            <li className="menu-item">
-              <Link href={`/category/sports`} title={`Sports`}>
-                Sports
+            <li>
+              <Link href="/category/sports">
+                <Image src={iconSports} width={20} height={20} alt="sports" />
+                <span>Sports</span>
               </Link>
             </li>
-            <li className="menu-item">
-              <Link href={`/category/strategy`} title={`Startegy`}>
-                Strategy
+            <li>
+              <Link href="/category/strategy">
+                <Image src={iconStrategy} width={20} height={20} alt="strategy" />
+                <span>Strategy</span>
               </Link>
             </li>
           </ul>
+          <div className="nav-footer">
+            <ul>
+              <li>
+                <Link href="/t/about">About</Link>
+              </li>
+              <li>
+                <Link href="/t/privacy-policy">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link href="/t/terms-of-use">Terms of Use</Link>
+              </li>
+            </ul>
+            <p>
+              © {new Date().getFullYear()} {SITE_META.NAME}
+            </p>
+          </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 }

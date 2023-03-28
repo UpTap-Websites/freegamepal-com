@@ -111,7 +111,7 @@ export default function Game({ game, relatedGames }) {
               ))}
             </ul>
           </div>
-          <div className="xl:order-3 xl:w-80">
+          <div className="mt-3 xl:order-3 xl:mt-0 xl:w-80">
             <ul role={`list`} className="grid grid-cols-3 gap-3 text-sm">
               {relatedGames.slice(26).map((i) => (
                 <ListItem key={i.slug} item={i} type={`no-text`} />

@@ -16,8 +16,14 @@ export default function Category({ games, category, total }) {
     <Layout>
       <Head>
         <title>{category.name + ` Games | ` + SITE_META.NAME}</title>
-        <meta name="description" content={`Play ${category.name} games on ${SITE_META.NAME}`} />
-        <link rel="canonical" href={`${SITE_META.URL}/category/${category.slug}`} />
+        <meta
+          name="description"
+          content={`Play ${category.name} games on ${SITE_META.NAME}`}
+        />
+        <link
+          rel="canonical"
+          href={`${SITE_META.URL}/category/${category.slug}`}
+        />
       </Head>
       <AdScript />
 
@@ -26,9 +32,9 @@ export default function Category({ games, category, total }) {
           <h1>{category.name + ` Games`}</h1>
           {/* <span className="total">{total}</span> */}
         </div>
-        <ul className={`game-list`}>
+        <ul role={`list`} className={`game-list hide-text-list`}>
           {games.map((i, index) => (
-            <li key={i.slug}>
+            <li role={`listitem`} key={i.slug}>
               <Link href={`/game/` + i.slug}>
                 <Image
                   className="image"

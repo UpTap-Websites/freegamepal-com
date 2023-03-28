@@ -38,7 +38,9 @@ export default function Navbar({ navItems }) {
     currentItem && currentItem.classList.remove("current"); // 如果存在.current则先移除
 
     for (let i of menuItems) {
-      i.getAttribute("href") === currentPath ? (i.parentNode.classList += " current") : null;
+      i.getAttribute("href") === currentPath
+        ? (i.parentNode.classList += " current")
+        : null;
       // console.log(`parent Ele: `, i.parentElement);
       // console.log(`parent Node: `, i.parentNode);
       // console.log(`a href: `, i.getAttribute("href"));
@@ -48,17 +50,28 @@ export default function Navbar({ navItems }) {
   }, [currentPath]);
   return (
     <nav className="site-nav">
-      <div className="grow relative">
+      <div className="relative grow">
         <Link href="/" className="site-branding">
-          <Image className="logo" width={20} height={20} src={Logo} alt="Logo" />
+          <Image
+            className="logo"
+            width={20}
+            height={20}
+            src={Logo}
+            alt="Logo"
+          />
 
           <span>FreeGamePal</span>
         </Link>
         <button className="menu-btn" onClick={handleClick}>
-          <Image src={isOpen ? iconClose : iconMenu} width={20} height={20} alt="menu" />
+          <Image
+            src={isOpen ? iconClose : iconMenu}
+            width={20}
+            height={20}
+            alt="menu"
+          />
         </button>
         <div className={`menu-content xl:block ${isOpen ? "" : "hidden"}`}>
-          <ul className="menu-list">
+          <ul role={`navigation`} className="menu-list">
             <li>
               <Link href="/">
                 <Image src={iconHome} width={20} height={20} alt="home" />
@@ -73,13 +86,23 @@ export default function Navbar({ navItems }) {
             </li>
             <li>
               <Link href="/category/adventure">
-                <Image src={iconAdventure} width={20} height={20} alt="adventure" />
+                <Image
+                  src={iconAdventure}
+                  width={20}
+                  height={20}
+                  alt="adventure"
+                />
                 <span>Adventure</span>
               </Link>
             </li>
             <li>
               <Link href="/category/classics">
-                <Image src={iconClassics} width={20} height={20} alt="classics" />
+                <Image
+                  src={iconClassics}
+                  width={20}
+                  height={20}
+                  alt="classics"
+                />
                 <span>Classics</span>
               </Link>
             </li>
@@ -109,7 +132,12 @@ export default function Navbar({ navItems }) {
             </li>
             <li>
               <Link href="/category/strategy">
-                <Image src={iconStrategy} width={20} height={20} alt="strategy" />
+                <Image
+                  src={iconStrategy}
+                  width={20}
+                  height={20}
+                  alt="strategy"
+                />
                 <span>Strategy</span>
               </Link>
             </li>

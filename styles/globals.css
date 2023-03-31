@@ -23,7 +23,7 @@ body {
 }
 
 .menu-btn {
-  @apply absolute top-4 right-4 grid h-10 w-10 items-center justify-center  xl:hidden;
+  @apply absolute right-4 top-4 grid h-10 w-10 items-center justify-center  xl:hidden;
 }
 
 .menu-content {
@@ -47,7 +47,7 @@ body {
 }
 
 .nav-footer {
-  @apply m-4 whitespace-nowrap rounded-b-3xl text-xs xl:absolute xl:left-0 xl:bottom-0 xl:block;
+  @apply m-4 whitespace-nowrap rounded-b-3xl text-xs xl:absolute xl:bottom-0 xl:left-0 xl:block;
 }
 
 .nav-footer ul {
@@ -85,7 +85,7 @@ body {
 }
 
 .section-title h2 {
-  @apply after:absolute after:left-0 after:bottom-1 after:-z-10 after:h-2 after:w-8 after:bg-gradient-to-r after:from-yellow-400 after:to-orange-400;
+  @apply after:absolute after:bottom-1 after:left-0 after:-z-10 after:h-2 after:w-8 after:bg-gradient-to-r after:from-yellow-400 after:to-orange-400;
 }
 
 .more-link {
@@ -101,12 +101,12 @@ body {
 }
 
 .page-title h1 {
-  @apply after:absolute after:left-1/2 after:bottom-1 after:-z-10 after:h-3 after:w-14 after:-translate-x-1/2 after:bg-gradient-to-r after:from-yellow-400 after:to-orange-400;
+  @apply after:absolute after:bottom-1 after:left-1/2 after:-z-10 after:h-3 after:w-14 after:-translate-x-1/2 after:bg-gradient-to-r after:from-yellow-400 after:to-orange-400;
 }
 
 .page-content {
   overflow-wrap: anywhere;
-  @apply m-4 xl:my-8 xl:mx-auto xl:max-w-3xl;
+  @apply m-4 xl:mx-auto xl:my-8 xl:max-w-3xl;
 }
 
 .page-content h2 {
@@ -166,4 +166,11 @@ body {
 
 .play-btn {
   @apply flex w-full justify-center rounded-lg bg-orange-400 py-3 text-2xl font-bold text-white shadow;
+}
+
+.featured {
+  @apply relative z-0;
+}
+.featured::after {
+  @apply absolute -left-6 top-2 z-10 -rotate-45 bg-gradient-to-r from-rose-500 to-orange-500 px-8 py-1 text-xs text-white content-['HOT'];
 }

@@ -2,11 +2,17 @@ import getGameBanner from "@/utils/getGameBanner";
 import getGameIcon from "@/utils/getGameIcon";
 import Image from "next/image";
 import Link from "next/link";
+import { FEATURED_GAMES } from "@/lib/constants";
 
 export default function ListItem({ item, type }) {
+  const isFeatured = FEATURED_GAMES.includes(item.gid);
   return (
     <li role={`listitem`}>
-      <Link href={`/game/${item.slug}`} title={item.title}>
+      <Link
+        href={`/game/${item.slug}`}
+        title={item.title}
+        className={isFeatured ? "featured" : ""}
+      >
         <Image
           className="image"
           src={

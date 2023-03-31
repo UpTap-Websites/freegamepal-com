@@ -47,7 +47,7 @@ body {
 }
 
 .nav-footer {
-  @apply m-4 whitespace-nowrap rounded-b-3xl text-xs xl:absolute xl:bottom-0 xl:left-0 xl:block;
+  @apply inset-x-0 m-4 whitespace-nowrap rounded-b-3xl text-xs xl:absolute xl:bottom-0 xl:left-0 xl:block;
 }
 
 .nav-footer ul {
@@ -58,7 +58,7 @@ body {
   @apply opacity-70;
 }
 .main-content {
-  @apply flex grow flex-col xl:overflow-y-scroll xl:pl-60;
+  @apply flex grow flex-col xl:pl-60;
 }
 .site-main {
   @apply grid grow gap-4 bg-blue-900 text-blue-900 xl:grid-cols-3 xl:p-8;

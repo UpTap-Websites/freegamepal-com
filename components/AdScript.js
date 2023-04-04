@@ -14,7 +14,7 @@ export default function AdScript() {
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
           crossOrigin="anonymous"
-          strategy={`beforeInteractive`}
+          // strategy={`beforeInteractive`}
         />
       )}
     </>

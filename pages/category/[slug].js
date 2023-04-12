@@ -59,7 +59,7 @@ export default function Category({ games, category, total }) {
 
 export const getStaticProps = async (ctx) => {
   console.log(`ctx >>`, ctx);
-  const data = await getGamesByCategorySlug(ctx.params.slug, 48);
+  const data = await getGamesByCategorySlug(ctx.params.slug, 48 + 4);
 
   return {
     props: {

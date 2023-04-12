@@ -152,7 +152,7 @@ export const getStaticProps = async (ctx) => {
 };
 
 export const getStaticPaths = async () => {
-  const PER_PAGE = 48;
+  const PER_PAGE = 48 + 4;
   // 按分类取
   const categories = await getCategories();
   // console.log(`detai ..categories`, categories);

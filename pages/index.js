@@ -16,7 +16,7 @@ export default function Home({ data }) {
       <Head>
         <title>{SITE_META.NAME + ` | ` + SITE_META.TAGLINE}</title>
         <meta name="description" content="Play online games for free!" />
-        <link rel="canonical" href={SITE_META.DOMAIN} />
+        <link rel="canonical" href={SITE_META.URL} />
       </Head>
       <AdScript />
 
@@ -25,7 +25,11 @@ export default function Home({ data }) {
           <div className={`section-title`}>
             <h2 className={`h2`}>{i.category.name}</h2>
             {i.data.total > 6 ? (
-              <Link href={`/category/` + i.category.slug} className="more-link" title="More">
+              <Link
+                href={`/category/` + i.category.slug}
+                className="more-link"
+                title="More"
+              >
                 More
               </Link>
             ) : null}

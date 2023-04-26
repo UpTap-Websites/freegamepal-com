@@ -7,6 +7,7 @@ const nextConfig = {
     // formats: [`image/avif`, `image/webp`],
     unoptimized: true,
   },
+  trailingSlash: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === `development` ? false : true,
   },

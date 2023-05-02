@@ -33,7 +33,7 @@ export default function Game({ game, relatedGames }) {
           name="description"
           content={`Play ${game.title} on ${SITE_META.NAME}`}
         />
-        <link rel="canonical" href={`${SITE_META.URL}/game/${game.slug}`} />
+        <link rel="canonical" href={`${SITE_META.URL}/game/${game.slug}/`} />
       </Head>
       <AdScript />
       <div className="game-box">
@@ -41,9 +41,8 @@ export default function Game({ game, relatedGames }) {
           <div className="xl:order-2 xl:grow">
             <div class="mb-6">
               <iframe
-                class="mx-auto hidden xl:grid xl:h-[600px] xl:w-full"
+                class="mx-auto hidden border-0 xl:grid xl:h-[600px] xl:w-full"
                 src={getGameUrl(game.slug)}
-                frameborder="0"
               ></iframe>
             </div>
             <div class="breadcrumb my-4 flex gap-2 text-sm text-slate-400">
@@ -152,7 +151,7 @@ export const getStaticProps = async (ctx) => {
 };
 
 export const getStaticPaths = async () => {
-  const PER_PAGE = 48 + 4 + 4;
+  const PER_PAGE = 48 + 4 + 4 + 4;
   // 按分类取
   const categories = await getCategories();
   // console.log(`detai ..categories`, categories);

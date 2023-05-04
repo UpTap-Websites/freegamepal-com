@@ -1,12 +1,12 @@
 import Head from "next/head";
-import Layout from "../components/Layout";
+import Layout from "@/components/Layout";
 
 import Link from "next/link";
 
 import ListItem from "@/components/ListItem";
-import { getDataForHome } from "../lib/api";
-import { SITE_META } from "../lib/constants";
-import AdScript from "@/components/AdScript";
+import { getDataForHome } from "@/lib/api";
+import { SITE_META } from "@/lib/constants";
+// import AdScript from "@/components/AdScript";
 
 export default function Home({ data }) {
   console.log(`data: `, data);
@@ -17,8 +17,15 @@ export default function Home({ data }) {
         <title>{SITE_META.NAME + ` | ` + SITE_META.TAGLINE}</title>
         <meta name="description" content="Play online games for free!" />
         <link rel="canonical" href={SITE_META.URL} />
+        <script
+          // id="ads-init"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5791227462311753"
+          crossOrigin="anonymous"
+          // strategy={`beforeInteractive`}
+        />
       </Head>
-      <AdScript />
+      {/* <AdScript /> */}
 
       {data.map((i, index) => (
         <section className="game-box" key={i.category.slug}>

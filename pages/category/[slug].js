@@ -3,7 +3,7 @@ import Image from "next/image";
 import Layout from "@/components/Layout";
 
 import Link from "next/link";
-import { SITE_META } from "@/lib/constants";
+import { GAMES_PER_PAGE, SITE_META } from "@/lib/constants";
 
 import { getCategories, getGamesByCategorySlug } from "@/lib/api";
 import getGameIcon from "@/utils/getGameIcon";
@@ -59,7 +59,7 @@ export default function Category({ games, category, total }) {
 
 export const getStaticProps = async (ctx) => {
   console.log(`ctx >>`, ctx);
-  const data = await getGamesByCategorySlug(ctx.params.slug, 48 + 4 + 4 + 4);
+  const data = await getGamesByCategorySlug(ctx.params.slug, GAMES_PER_PAGE); // 2023.5.20
 
   return {
     props: {

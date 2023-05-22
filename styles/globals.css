@@ -6,6 +6,9 @@ html,
 body {
   @apply bg-slate-900;
 }
+.full-screen {
+  @apply h-screen overflow-hidden xl:h-auto xl:overflow-auto;
+}
 .wrapper {
   @apply flex min-h-screen flex-col font-['Nunito'] xl:flex-row;
 }
@@ -73,7 +76,7 @@ body {
 }
 
 .game-box {
-  @apply border-4 border-blue-100 bg-white shadow-lg shadow-blue-500/10 xl:rounded-xl;
+  @apply border-blue-100 bg-white shadow-lg shadow-blue-500/10 xl:rounded-xl xl:border-4;
 }
 
 .section-title {

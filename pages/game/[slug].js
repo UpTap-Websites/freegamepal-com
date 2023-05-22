@@ -139,19 +139,19 @@ export default function Game({ game, relatedGames }) {
               </div>
             </div>
             <div class="order-4 mx-auto my-3 w-72 xl:absolute xl:left-1/2 xl:top-72 xl:z-30 xl:order-1 xl:max-w-xs xl:-translate-x-1/2">
-              {/* <button
+              <button
                 className="play-btn"
                 title={`Play ` + game.title + ` Now`}
               >
                 <span>Play Now</span>
-              </button> */}
-              <Link
+              </button>
+              {/* <Link
                 href={getGameUrl(game.slug)}
                 className="play-btn"
                 title={`Play ` + game.title + ` Now`}
               >
                 <span>Play Now</span>
-              </Link>
+              </Link> */}
             </div>
             <div className="description order-5 my-4 flex flex-col gap-2 rounded-lg border-2 border-blue-100 bg-blue-50 p-4 text-sm">
               <h3 className="mb-2 font-bold">Description</h3>

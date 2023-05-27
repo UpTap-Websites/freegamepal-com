@@ -32,7 +32,7 @@ export default function Game({ game, relatedGames }) {
       process.env.NODE_ENV === `development` ? e.preventDefault() : null;
       console.log(`Event: `, e);
       gtag && gtag("event", "click_CTA", { game: game.title });
-      setGameUrl(getGameUrl(game.gid));
+      setGameUrl(getGameUrl(game.slug));
       player.classList.remove("hidden");
       gameIframe.classList.remove("hidden");
       CTA.classList.add("xl:hidden");
@@ -57,7 +57,7 @@ export default function Game({ game, relatedGames }) {
       CTA.removeEventListener("click", handleClick);
       backBtn.removeEventListener("click", handleClick);
     };
-  }, [game.title, game.gid]);
+  }, [game.title, game.slug]);
   return (
     <Layout>
       <Head>
@@ -66,7 +66,7 @@ export default function Game({ game, relatedGames }) {
           name="description"
           content={`Play ${game.title} on ${SITE_META.NAME}`}
         />
-        <link rel="canonical" href={`${SITE_META.URL}/game/${game.slug}/`} />
+        <link rel="canonical" href={`${SITE_META.URL}/game/${game.slug}`} />
       </Head>
       <AdScript />
       <div className="game-box">

@@ -68,7 +68,7 @@ export default function Game({ game, relatedGames }) {
         />
         <link rel="canonical" href={`${SITE_META.URL}/game/${game.slug}`} />
       </Head>
-      <AdScript />
+      {/* <AdScript /> */}
       <div className="game-box">
         <section className="game-detail m-4 flex flex-col xl:flex-row xl:gap-6">
           <div className="flex flex-col xl:relative xl:order-2 xl:grow">

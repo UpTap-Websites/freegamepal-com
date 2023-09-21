@@ -25,7 +25,7 @@ export default function Category({ games, category, total }) {
           href={`${SITE_META.URL}/category/${category.slug}`}
         />
       </Head>
-      <AdScript />
+      {/* <AdScript /> */}
 
       <div className={`game-box category`}>
         <div className={`page-title`}>

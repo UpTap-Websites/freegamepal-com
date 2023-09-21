@@ -17,13 +17,13 @@ export default function Home({ data }) {
         <title>{SITE_META.NAME + ` | ` + SITE_META.TAGLINE}</title>
         <meta name="description" content="Play online games for free!" />
         <link rel="canonical" href={SITE_META.URL} />
-        <script
+        {/* <script
           // id="ads-init"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5791227462311753"
           crossOrigin="anonymous"
           // strategy={`beforeInteractive`}
-        />
+        /> */}
       </Head>
       {/* <AdScript /> */}
 

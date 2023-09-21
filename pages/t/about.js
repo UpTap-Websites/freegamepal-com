@@ -35,7 +35,10 @@ export default function About() {
           <div className="page-title">
             <h1>About</h1>
           </div>
-          <div className="page-content" dangerouslySetInnerHTML={{ __html: content }} />
+          <div
+            className="page-content"
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
         </section>
       </div>
     </Layout>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { SITE_META } from "../lib/constants";
 import Image from "next/image";
-import Logo from "@/public/brand/logo.png";
+import Logo from "@/public/brand/logo.svg";
 import iconHome from "@/public/assets/icon/home.svg";
 import iconMenu from "@/public/assets/icon/menu.svg";
 import iconClose from "@/public/assets/icon/close.svg";
@@ -54,13 +54,12 @@ export default function Navbar({ navItems }) {
         <Link href="/" className="site-branding">
           <Image
             className="logo"
-            width={20}
-            height={20}
+            width={300}
+            height={121}
             src={Logo}
             alt="Logo"
           />
-
-          <span>FreeGamePal</span>
+          <span className="sr-only">{SITE_META.NAME}</span>
         </Link>
         <button className="menu-btn" onClick={handleClick}>
           <Image

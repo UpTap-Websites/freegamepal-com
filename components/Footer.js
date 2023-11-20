@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SITE_META } from "@/lib/constants";
-import Logo from "@/public/brand/logo.png";
+import Logo from "@/public/brand/logo-white-min.svg";
 // import { useRouter } from "next/router";
 export default function Footer(params) {
   return (
@@ -21,10 +21,10 @@ export default function Footer(params) {
       </nav> */}
       {/* <Image className="footer-logo" src={Logo} alt={SITE_META.NAME} /> */}
       <Image
-        className="w-8 h-8"
+        className="h-6 opacity-50"
         src={Logo}
-        width={14}
-        height={14}
+        width={300}
+        height={121}
         // src={useRouter().basePath + `/brand/uptapgame-logo.svg`}
         alt={SITE_META.NAME}
       />

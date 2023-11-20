@@ -14,15 +14,15 @@ body {
 }
 
 .site-nav {
-  @apply flex flex-col bg-blue-500 text-sm text-white xl:fixed xl:left-0 xl:h-screen xl:w-60 xl:bg-slate-800;
+  @apply flex flex-col bg-emerald-500 text-sm text-white xl:fixed xl:left-0 xl:h-screen xl:w-60 xl:bg-slate-800;
 }
 
 .site-branding {
-  @apply inline-flex items-center gap-2 p-3 text-lg font-black xl:flex xl:flex-col xl:justify-center xl:bg-gradient-to-br xl:from-blue-500 xl:to-blue-700;
+  @apply inline-flex items-center gap-2 p-3 text-lg font-black xl:flex xl:flex-col xl:justify-center xl:bg-emerald-500;
 }
 
 .site-branding .logo {
-  @apply h-12 w-12 rounded-xl border-2 border-white bg-gradient-to-t from-orange-400 to-yellow-300 shadow-lg xl:h-20 xl:w-20 xl:border-4;
+  @apply h-12;
 }
 
 .menu-btn {
@@ -38,7 +38,7 @@ body {
 }
 
 .menu-list li {
-  @apply border-l-4 border-l-blue-800 xl:transform xl:duration-300 xl:hover:border-l-blue-400 xl:hover:pl-4;
+  @apply border-l-4 border-l-emerald-800 xl:transform xl:duration-300 xl:hover:border-l-emerald-400 xl:hover:pl-4;
 }
 
 .menu-list li a {
@@ -64,7 +64,7 @@ body {
   @apply flex grow flex-col xl:pl-60;
 }
 .site-main {
-  @apply grid grow gap-4 bg-blue-900 text-blue-900 xl:grid-cols-3 xl:p-8;
+  @apply grid grow gap-4 bg-gray-500 text-slate-900 xl:grid-cols-3 xl:p-8;
 }
 
 .list .site-main,
@@ -76,7 +76,7 @@ body {
 }
 
 .game-box {
-  @apply border-blue-100 bg-white shadow-lg shadow-blue-500/10 xl:rounded-xl xl:border-4;
+  @apply bg-white shadow-lg xl:rounded-xl;
 }
 
 .section-title {
@@ -84,7 +84,7 @@ body {
 }
 
 .section-title h2 {
-  @apply relative z-0 text-xl font-bold text-blue-800;
+  @apply relative z-0 text-xl font-bold text-slate-800;
 }
 
 .section-title h2 {
@@ -92,7 +92,7 @@ body {
 }
 
 .more-link {
-  @apply text-blue-800;
+  @apply text-slate-800;
 }
 
 .page-title {
@@ -100,7 +100,7 @@ body {
 }
 
 .page-title h1 {
-  @apply relative z-0 my-3 text-2xl font-bold text-blue-800 xl:text-4xl;
+  @apply relative z-0 my-3 text-2xl font-bold text-slate-800 xl:text-4xl;
 }
 
 .page-title h1 {
@@ -156,7 +156,7 @@ body {
 }
 
 .breadcrumb a {
-  @apply text-blue-600;
+  @apply text-slate-600;
 }
 
 .site-footer {
@@ -174,6 +174,7 @@ body {
 .featured {
   @apply relative z-0;
 }
+
 .featured::after {
   @apply absolute -left-6 top-2 z-10 -rotate-45 bg-gradient-to-r from-rose-500 to-orange-500 px-8 py-1 text-xs text-white content-['HOT'];
 }

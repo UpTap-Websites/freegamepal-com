@@ -45,6 +45,10 @@ body {
   @apply flex items-center gap-2 py-2 pl-2;
 }
 
+.menu-list img {
+  @apply h-auto w-auto;
+}
+
 .menu-list .current {
   @apply border-l-yellow-400 font-bold xl:pl-4 xl:hover:border-l-yellow-400;
 }

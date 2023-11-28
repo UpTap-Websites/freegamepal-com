@@ -6,6 +6,7 @@ import Link from "next/link";
 import ListItem from "@/components/ListItem";
 import { getDataForHome } from "@/lib/api";
 import { SITE_META } from "@/lib/constants";
+import AdSense from "@/components/AdSense";
 // import AdScript from "@/components/AdScript";
 
 export default function Home({ data }) {
@@ -59,6 +60,11 @@ export default function Home({ data }) {
               // </li>
             ))}
           </ul>
+          {index < 3 ? (
+            <div className="pb-4">
+              <AdSense />
+            </div>
+          ) : null}
         </section>
       ))}
     </Layout>

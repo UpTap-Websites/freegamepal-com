@@ -28,6 +28,14 @@ export default function Game({ game, relatedGames }) {
     const CTA = document.querySelector(".play-btn");
     const backBtn = document.querySelector(".back-btn");
     const bodyBg = document.querySelector("body");
+    function resetAll() {
+      player.classList.add("hidden");
+      gameIframe.classList.add("hidden");
+      CTA.classList.remove("xl:hidden");
+      backBtn.classList.add("hidden");
+      setGameUrl("");
+    }
+    resetAll();
     function handleClick(e) {
       process.env.NODE_ENV === `development` ? e.preventDefault() : null;
       console.log(`Event: `, e);
@@ -43,11 +51,7 @@ export default function Game({ game, relatedGames }) {
       process.env.NODE_ENV === `development` ? e.preventDefault() : null;
       console.log(`Event: `, e);
       gtag && gtag("event", "click_backBtn", { game: game.title });
-      player.classList.add("hidden");
-      gameIframe.classList.add("hidden");
-      CTA.classList.remove("xl:hidden");
-      backBtn.classList.add("hidden");
-      setGameUrl("");
+      resetAll();
       bodyBg.classList.remove("full-screen");
     }
 

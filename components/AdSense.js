@@ -11,7 +11,7 @@ export default function AdSense({
   layoutKey,
 }) {
   useEffect(() => {
-    if (SHOW_AD)
+    if (SHOW_AD && ADSENSE_ID !== "")
       try {
         let adsbygoogle = window.adsbygoogle || [];
         adsbygoogle.push({});

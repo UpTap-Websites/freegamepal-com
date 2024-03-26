@@ -76,7 +76,7 @@ export default function Game({ game, relatedGames }) {
       <div className="game-box">
         <section className="game-detail m-4 flex flex-col xl:flex-row xl:gap-6">
           <div className="flex flex-col xl:relative xl:order-2 xl:grow">
-            <div class="player fixed inset-0 order-1 hidden overflow-hidden bg-black xl:relative xl:mb-6 xl:block">
+            <div className="player fixed inset-0 order-1 hidden overflow-hidden bg-black xl:relative xl:mb-6 xl:block">
               <div className="back-btn absolute left-0 top-2 z-20 hidden rounded-r-full bg-lime-400 p-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ export default function Game({ game, relatedGames }) {
                 </svg>
               </div>
               <iframe
-                class="gameIframe relative z-10 mx-auto hidden h-screen w-screen border-0 xl:grid xl:h-[600px] xl:w-full"
+                className="gameIframe relative z-10 mx-auto hidden h-screen w-screen border-0 xl:grid xl:h-[600px] xl:w-full"
                 // src={getGameUrl(game.gid)}
                 src={gameUrl}
               ></iframe>
@@ -107,7 +107,7 @@ export default function Game({ game, relatedGames }) {
                 loading={`eager`}
               />
             </div>
-            <div class="breadcrumb order-2 my-4 flex gap-2 text-sm text-slate-400">
+            <div className="breadcrumb order-2 my-4 flex gap-2 text-sm text-slate-400">
               <Link href="/">Home</Link>
               <span>/</span>
               <Link href={`/category/${game.category.slug}`}>
@@ -142,7 +142,7 @@ export default function Game({ game, relatedGames }) {
                 </div>
               </div>
             </div>
-            <div class="order-4 mx-auto my-3 w-72 xl:absolute xl:left-1/2 xl:top-72 xl:z-30 xl:order-1 xl:max-w-xs xl:-translate-x-1/2">
+            <div className="order-4 mx-auto my-3 w-72 xl:absolute xl:left-1/2 xl:top-72 xl:z-30 xl:order-1 xl:max-w-xs xl:-translate-x-1/2">
               <button
                 className="play-btn"
                 title={`Play ` + game.title + ` Now`}
@@ -168,7 +168,7 @@ export default function Game({ game, relatedGames }) {
           <div className="xl:order-1 xl:w-80">
             <div
               role={`banner`}
-              class="banner mx-auto mb-6 flex h-[250px] w-[300px] items-center justify-center bg-slate-100"
+              className="banner mx-auto mb-6 flex h-[250px] w-[300px] items-center justify-center bg-slate-100"
             >
               <span>Your Position</span>
             </div>
@@ -186,7 +186,7 @@ export default function Game({ game, relatedGames }) {
             </ul>
             <div
               role={`banner`}
-              class="banner mx-auto mt-6 flex h-[250px] w-[300px] items-center justify-center bg-slate-100"
+              className="banner mx-auto mt-6 flex h-[250px] w-[300px] items-center justify-center bg-slate-100"
             >
               <span>Your Position</span>
             </div>

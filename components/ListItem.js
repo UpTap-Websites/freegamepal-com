@@ -14,7 +14,7 @@ export default function ListItem({ item, type }) {
         className={isFeatured ? "featured" : ""}
       >
         <Image
-          className="image"
+          className="image rounded-xl"
           src={
             type !== `banner` ? getGameIcon(item.gid) : getGameBanner(item.gid)
           }

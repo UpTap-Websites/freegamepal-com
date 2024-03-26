@@ -166,30 +166,30 @@ export default function Game({ game, relatedGames }) {
             </div>
           </div>
           <div className="xl:order-1 xl:w-80">
-            <div
+            {/* <div
               role={`banner`}
               className="banner mx-auto mb-6 flex h-[250px] w-[300px] items-center justify-center bg-slate-100"
             >
               <span>Your Position</span>
-            </div>
+            </div> */}
             <ul role={`list`} className="grid grid-cols-3 gap-3 text-sm">
-              {relatedGames.slice(8, 26).map((i) => (
+              {relatedGames.slice(8, 26 + 6).map((i) => (
                 <ListItem key={i.slug} item={i} type={`no-text`} />
               ))}
             </ul>
           </div>
           <div className="mt-3 xl:order-3 xl:mt-0 xl:w-80">
             <ul role={`list`} className="grid grid-cols-3 gap-3 text-sm">
-              {relatedGames.slice(26).map((i) => (
+              {relatedGames.slice(26 + 6).map((i) => (
                 <ListItem key={i.slug} item={i} type={`no-text`} />
               ))}
             </ul>
-            <div
+            {/* <div
               role={`banner`}
               className="banner mx-auto mt-6 flex h-[250px] w-[300px] items-center justify-center bg-slate-100"
             >
               <span>Your Position</span>
-            </div>
+            </div> */}
           </div>
         </section>
         <section>
@@ -208,7 +208,7 @@ export default function Game({ game, relatedGames }) {
 }
 
 export const getStaticProps = async (ctx) => {
-  const data = await getGameBySlug(ctx.params.slug, 8 + 36);
+  const data = await getGameBySlug(ctx.params.slug, 8 + 36 + 6 * 2);
 
   return {
     props: {
